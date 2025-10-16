@@ -1,0 +1,36 @@
+# Core dependencies used across example scripts in this repository.
+# Some projects use heavy ML libraries (transformers, torch) and optional dependencies
+# are marked with comments. Install only what you need for the subproject you plan to run.
+
+gradio>=3.0
+transformers>=4.30
+torch>=1.13    # CPU-only; install a matching CUDA build if you have a GPU (see PyTorch install guide)
+datasets>=2.0
+langchain>=0.0.300  # langchain versions vary a lot; if you hit API mismatch, try adjusting to the project's imports
+langchain-community>=0.0.20
+sentence-transformers>=2.2
+faiss-cpu; platform_system != 'Windows'  # on Windows, install faiss via conda or use faiss-cpu wheel if available
+pandas
+matplotlib
+tqdm
+Pillow
+openai
+ragatouille
+scikit-learn
+
+# Optional / GUI
+tk
+
+# Web-scraping / helper libs (if used by scraper scripts)
+beautifulsoup4
+requests
+
+# If you need to run the Distil-Whisper / ASR examples
+transformers>=4.30
+torchaudio
+
+# Notes:
+# - Some packages (faiss, torch) provide platform-specific wheels; prefer the official install commands
+#   from their project pages for best results (for example, `pip install torch --index-url https://download.pytorch.org/whl/cu117`)
+# - `langchain` and `langchain-community` versions are volatile; if you hit import errors, try pinning to the versions used in the script or
+#   use the virtual environment in the project folder and adjust the pinned versions accordingly.
