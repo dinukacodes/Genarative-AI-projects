@@ -29,6 +29,11 @@ This repository is intended as a learning playground: code is typically minimal 
 
     python -m venv .venv; .\.venv\Scripts\Activate.ps1
 
+  - Linux / macOS:
+
+    python3 -m venv .venv
+    source .venv/bin/activate
+
 - Install dependencies (look for requirements in each subfolder or top of the script):
 
     pip install -r requirements.txt
@@ -40,6 +45,14 @@ This repository is intended as a learning playground: code is typically minimal 
     or
 
     python RAG-from-scratch\rag_with_gradio.py
+
+  On Linux / macOS use forward slashes:
+
+    python Multimodel-vqa-tranformers/imageQA.py
+
+    or
+
+    python RAG-from-scratch/rag_with_gradio.py
 
 Note: Some projects may require model downloads (transformers, whisper weights, etc.) which can be large. Run scripts while connected to the internet so they can cache models locally.
 
